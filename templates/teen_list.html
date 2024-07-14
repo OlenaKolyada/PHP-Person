@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teenagers List</title>
+</head>
+
+<body>
+    <?php include_once "templates/header.html" ?>
+
+    <table>
+        <thead><h2>Teenagers List</h2></thead>
+        <tr>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sport</th>
+        </tr>
+    <?php foreach($teenList as $teen): ?>
+        <tr>
+            <td><?= $teen->getSurname(); ?></td>
+            <td><?= $teen->getName(); ?></td>
+            <td><?= $teen->getAge(); ?></td>
+            <td><?= $teen->getSport() ? 'yes' : 'no'; ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </table>
+    
+
+
+
+
+    <?php include_once "templates/footer.html" ?>
+</body>
+
+</html>
+

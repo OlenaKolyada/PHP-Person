@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adults List</title>
+</head>
+
+<body>
+    <?php include_once "templates/header.html" ?>
+    <table>
+        <thead><h2>Adults List</h2></thead>
+        <tr>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Vote</th>
+        </tr>
+    <?php foreach($adultList as $adult): ?>
+        <tr>
+            <td><?= $adult->getSurname(); ?></td>
+            <td><?= $adult->getName(); ?></td>
+            <td><?= $adult->getAge(); ?></td>
+            <td><?= $adult->getVote() ? 'yes' : 'no' ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </table>
+    
+    <?php include_once "templates/footer.html" ?>
+</body>
+
+</html>
+

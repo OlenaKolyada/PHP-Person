@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teenager Form</title>
+</head>
+<body>
+    <?php include_once "templates/header.html" ?>
+
+    <h2>Teenager Form</h2>
+
+    <?php if($teenFormSent): ?>
+        <h4>Your form is sent succesfully!</h4>
+    <?php endif; ?>
+
+    <form action="?page=teen_post" id="teen_form" method="post">
+
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" id="surname" autofocus required> *<br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age"><br><br>
+
+        <label for="sport">Do you play sport?</label>
+        
+        <input type="radio" id="sport_yes" name="sport" value="1" checked>
+        <label for="sport_yes">yes</label>
+
+        <input type="radio" id="sport_no" name="sport" value="0">
+        <label for="sport_no">no</label><br><br>
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Cancel"><br><br>
+    </form>
+
+    <?php include_once "templates/footer.html" ?>
+
+</body>
+</html>

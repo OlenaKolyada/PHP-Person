@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Form</title>
+</head>
+<body>
+    <?php include_once "templates/header.html" ?>
+
+    <h2>Adult Form</h2>
+
+    <?php if($adultFormSent): ?>
+        <h4>Your form is sent succesfully!</h4>
+    <?php endif; ?>
+
+    <form action="?page=adult_post" method="post" id="adult_form">
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" autofocus required> *<br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="vote">Can you vote?</label>
+
+        <input type="radio" id="vote_yes" name="vote" value="1" checked>
+        <label for="vote_yes">yes</label>
+
+        <input type="radio" id="vote_no" name="vote" value="0">
+        <label for="vote_no">no</label><br><br>
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Cancel"><br><br>
+    </form>
+    
+    <?php include_once "templates/footer.html" ?>
+</body>
+</html>
