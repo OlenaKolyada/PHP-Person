@@ -10,15 +10,19 @@ class Adult extends Person {
         $surname,
         $name,
         $age,
-        private bool $vote) {
+        private bool $vote
+    )
+    {
         parent::__construct($surname, $name, $age);
     }
 
-    public function setVote(bool $vote): void {
+    public function setVote(bool $vote): void
+    {
         $this->vote = $vote;
     }
 
-    public function getVote(): bool {
+    public function getVote(): bool
+    {
         return $this->vote; 
     }
 }
